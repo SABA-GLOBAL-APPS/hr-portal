@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="بوابة موحدة لموديولات دبلوم الموارد البشرية">
+<meta name="theme-color" content="#1e40af">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231e40af'/%3E%3Ctext x='32' y='42' font-size='28' font-weight='900' text-anchor='middle' fill='white' font-family='Arial'%3EHR%3C/text%3E%3C/svg%3E">
+<title>بوابة الموارد البشرية | HR Master Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="back" id="back"></div>
+
+<aside id="side">
+  <div class="brand"><div class="logo">HR</div><div><h1 id="tTitle"></h1><p id="tSub"></p></div></div>
+  <div class="search"><input id="q" type="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+  <nav id="list"></nav>
+  <div class="sfoot"><span id="tCount"></span><button id="reset" class="pill" style="padding:4px 10px;font-size:11px"></button></div>
+</aside>
+
+<main>
+  <header>
+    <button class="ib" id="menuBtn" aria-label="menu"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <button class="ib" id="homeBtn" aria-label="home"><svg viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></button>
+    <h2 id="cur"></h2><div class="sp"></div>
+    <button class="pill" id="done" style="display:none"></button>
+    <button class="ib hide-m" id="reload" style="display:none" aria-label="reload"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5"/></svg></button>
+    <a class="ib hide-m" id="ext" target="_blank" rel="noopener" style="display:none" aria-label="open"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+    <button class="ib hide-m" id="full" style="display:none" aria-label="fullscreen"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg></button>
+    <button class="ib" id="prev" disabled aria-label="prev" style="display:none"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+    <button class="ib" id="next" aria-label="next" style="display:none"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="ib" id="theme" aria-label="theme"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="pill" id="lang"></button>
+  </header>
+  <div class="bar"><i id="bar"></i></div>
+
+  <div class="stage" id="stage">
+    <div class="view" id="homeView"></div>
+    <div class="view hide" id="modView">
+      <div class="loader" id="loader"><div class="ring"></div></div>
+      <iframe id="frame" title="module" allow="autoplay; clipboard-write; fullscreen"></iframe>
+    </div>
+  </div>
+  <div class="mbar" id="mbar">
+    <button class="ib" id="mNext" aria-label="next"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+    <button class="pill" id="mDone"></button>
+    <button class="ib" id="mPrev" aria-label="prev"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+  </div>
+</main>
+<div class="toast" id="toast"></div>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>
